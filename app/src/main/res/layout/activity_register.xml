@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="wattsco.healthcaresystem.Register">
+
+    <TextView
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reg_cancelbutton"
+        android:layout_below="@+id/reg_regbutton"
+        android:layout_alignStart="@+id/reg_regbutton"
+        android:layout_alignEnd="@+id/reg_regbutton" />
+
+    <Button
+        android:text="Register Now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reg_regbutton"
+        android:onClick="reg_regbutton"
+        android:layout_below="@+id/reg_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="105dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="CPR no:"
+        android:ems="10"
+        android:id="@+id/reg_cpr"
+        android:layout_below="@+id/reg_name"
+        android:layout_alignStart="@+id/reg_name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/reg_email"
+        android:hint="E-mail"
+        android:layout_below="@+id/reg_cpr"
+        android:layout_alignStart="@+id/reg_cpr" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/reg_confirmpass"
+        android:hint="Confirm Password"
+        android:layout_marginBottom="47dp"
+        android:layout_above="@+id/reg_cancelbutton"
+        android:layout_alignStart="@+id/reg_pass" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/reg_pass"
+        android:hint="Password"
+        android:layout_above="@+id/reg_confirmpass"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Full name"
+        android:ems="10"
+        android:id="@+id/reg_name"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/reg_pass" />
+</RelativeLayout>
