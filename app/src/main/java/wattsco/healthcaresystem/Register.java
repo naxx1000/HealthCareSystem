@@ -23,17 +23,19 @@ public class Register extends AppCompatActivity {
     }
 
     public void reg_regbutton(View view) {
-
-        reg_name = ET_NAME.getText().toString();
-        reg_cpr = ET_CPR.getText().toString();
-        reg_email = ET_EMAIL.getText().toString();
-        reg_pass = ET_PASS.getText().toString();
-        reg_confirmpass = ET_CONFIRMPASS.getText().toString();
-        String method = "register";
-        BackgroundTask backgroundTask = new BackgroundTask(this);
-        backgroundTask.execute(method, reg_name, reg_cpr, reg_email, reg_pass, reg_confirmpass);
-        finish();
-
+        if(ET_EMAIL.getText().toString().contains("@")){
+            reg_name = ET_NAME.getText().toString();
+            reg_cpr = ET_CPR.getText().toString();
+            reg_email = ET_EMAIL.getText().toString();
+            reg_pass = ET_PASS.getText().toString();
+            reg_confirmpass = ET_CONFIRMPASS.getText().toString();
+            String method = "register";
+            BackgroundTask backgroundTask = new BackgroundTask(this);
+            backgroundTask.execute(method, reg_name, reg_cpr, reg_email, reg_pass, reg_confirmpass);
+            finish();
+        }else{
+            Toast.makeText(this,"Not a valid E-mail address.", Toast.LENGTH_LONG).show();
+        }
     }
 
 
